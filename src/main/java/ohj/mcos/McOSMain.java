@@ -3,25 +3,29 @@ package ohj.mcos;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.event.*;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import ohj.mcos.common.CommonProxy;
 import ohj.mcos.common.item.ItemLoader;
 
 /**
  * @author OldHuaJi
  */
-@Mod(modid = McOSMain.MODID, name = McOSMain.MODNAME, version = McOSMain.MODVERSION)
+@Mod(modid = mcOSMain.MODID, name = mcOSMain.MODNAME, version = mcOSMain.MODVERSION, acceptedMinecraftVersions = "1.10.2", dependencies = "after:IC2@[2.6.254,)")
 
 
-public class McOSMain {
-    @SidedProxy(clientSide = "ohj.mcos.client.ClientProxy", serverSide = "ohj.mcos.common.CommonProxy", modId = MODID)
-    public static CommonProxy proxy;
-    public static final String MODID = "mcos";
-    public static final String MODNAME = "McOS";
+public class mcOSMain {
+    public static final String MODID = "mcOS";
+    public static final String MODNAME = "mcOS";
     public static final String MODVERSION = "V0.1";
+    @SidedProxy(clientSide = "ohj.mcos.client.ClientProxy", serverSide = "ohj.mcos.common.CommonProxy")
+    public static CommonProxy proxy;
+
+    @Mod.Instance(MODID)
+    public static mcOSMain instance;
 
     @EventHandler
     public void preEvent(FMLPreInitializationEvent event) {
@@ -38,18 +42,8 @@ public class McOSMain {
         proxy.postEvent(event);
     }
 
-    @EventHandler
-    public void serverStarting(FMLServerStartingEvent event) {
-        proxy.serverStarting(event);
-    }
 
-
-    @EventHandler
-    private void serverAboutToStart(final FMLServerAboutToStartEvent evt) {
-
-    }
-
-    public static CreativeTabs tabMCOS = new CreativeTabs("tabMCOS") {
+    public static CreativeTabs tabmcOS = new CreativeTabs("tabmcOS") {
 
         @Override
         public Item getTabIconItem() {

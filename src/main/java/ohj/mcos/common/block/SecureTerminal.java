@@ -9,10 +9,10 @@ import ohj.mcos.mcOSMain;
  */
 
 
-public class ServerChassis extends Block {
-    public ServerChassis() {
+public class SecureTerminal extends Block {
+    public SecureTerminal() {
         super(Material.rock);
-        this.setBlockName("serverChassis")
+        this.setBlockName("secureTerminal")
                 .setCreativeTab(mcOSMain.tabmcOS);
     }
 }

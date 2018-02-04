@@ -10,10 +10,12 @@ import net.minecraft.block.Block;
 
 
 public class BlockLoader {
-    public static Block serverchassis = new ServerChassis();
+    public static Block serverChassis = new ServerChassis();
+    public static Block secureTreminal = new SecureTerminal();
 
     public BlockLoader(FMLPreInitializationEvent event) {
-        registerBlock(serverchassis);
+        registerBlock(serverChassis);
+        registerBlock(secureTreminal);
     }
 
     private static void registerBlock(Block block) {

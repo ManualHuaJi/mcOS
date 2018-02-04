@@ -1,4 +1,4 @@
-package ohj.mcos.clinet;
+package ohj.mcos.client;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -10,7 +10,7 @@ import ohj.mcos.common.CommonProxy;
  */
 
 
-public class ClinetProxy extends CommonProxy{
+public class ClientProxy extends CommonProxy{
     @Override
     public void preEvent(FMLPreInitializationEvent event) {
         super.preEvent(event);

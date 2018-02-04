@@ -3,7 +3,7 @@ package ohj.mcos.common;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import ohj.mcos.McOSMain;
+import ohj.mcos.client.gui.mcOSGui;
 import ohj.mcos.common.block.BlockLoader;
 import ohj.mcos.common.item.ItemLoader;
 
@@ -12,18 +12,24 @@ import ohj.mcos.common.item.ItemLoader;
  */
 
 
-public class CommonProxy extends McOSMain {
-    @Override
+public class CommonProxy {
+
     public void preEvent(FMLPreInitializationEvent event) {
         new ItemLoader(event);
         new BlockLoader(event);
+       /* if (Loader.isModLoaded("IC2") != true) {
+
+        }*/
+        /*if (Loader.isModLoaded("TE") != true) {
+        }*/
     }
 
-    @Override
+
     public void initEvent(FMLInitializationEvent event) {
+        new mcOSGui();
     }
 
-    @Override
+
     public void postEvent(FMLPostInitializationEvent event) {
     }
 }
