@@ -5,7 +5,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-import ohj.mcos.client.gui.GuiSmartPhone;
 import ohj.mcos.client.gui.mcOSGui;
 import ohj.mcos.mcOSMain;
 
@@ -18,7 +17,10 @@ public class ItemSmartPhone extends Item {
     public ItemSmartPhone() {
         super();
 
-        this.setUnlocalizedName("smartPhone").setTextureName(mcOSMain.MODID + ":" + this.getUnlocalizedName()).setCreativeTab(mcOSMain.tabmcOS).setMaxStackSize(1);
+        this.setUnlocalizedName("smartPhone")
+                .setTextureName(mcOSMain.MODID + ":" + this.getUnlocalizedName())
+                .setCreativeTab(mcOSMain.tabmcOS)
+                .setMaxStackSize(1);
 
     }
 

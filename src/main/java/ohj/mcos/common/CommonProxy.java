@@ -17,11 +17,7 @@ public class CommonProxy {
     public void preEvent(FMLPreInitializationEvent event) {
         new ItemLoader(event);
         new BlockLoader(event);
-       /* if (Loader.isModLoaded("IC2") != true) {
 
-        }*/
-        /*if (Loader.isModLoaded("TE") != true) {
-        }*/
     }
 
 

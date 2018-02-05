@@ -2,28 +2,31 @@ package ohj.mcos.client.gui;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.client.gui.inventory.GuiContainer;
-import ohj.mcos.common.container.ContainerSmartPhone;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiScreen;
 
 /**
  * @author OldHuaJi
  */
 
 @SideOnly(Side.CLIENT)
-public class GuiSmartPhone extends GuiContainer {
+public class GuiSmartPhone extends GuiScreen {
+    private Minecraft mc = Minecraft.getMinecraft();
+
+    @Override
+    public void drawScreen(int x, int y, float ticks) {
+        this.drawDefaultBackground();
+        super.drawScreen(x, y, ticks);
+    }
 
 
-    public GuiSmartPhone(ContainerSmartPhone p_i1072_1_) {
-        super(p_i1072_1_);
+    @Override
+    public boolean doesGuiPauseGame() {
+        return false;
     }
 
     @Override
-    protected void drawGuiContainerBackgroundLayer(float p_146976_1_, int p_146976_2_, int p_146976_3_) {
-
+    public void initGui() {
     }
 
-    @Override
-    protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-
-    }
 }
