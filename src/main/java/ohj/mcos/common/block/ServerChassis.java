@@ -8,11 +8,11 @@ import ohj.mcos.mcOSMain;
  * @author OldHuaJi
  */
 
-
 public class ServerChassis extends Block {
-    public ServerChassis() {
-        super(Material.rock);
-        this.setBlockName("serverChassis")
-                .setCreativeTab(mcOSMain.tabmcOS);
-    }
+	public ServerChassis() {
+		super(Material.ROCK);
+		this.setCreativeTab(mcOSMain.tabmcOS).setUnlocalizedName(getClass().getName().toLowerCase())
+				.setRegistryName(getUnlocalizedName());
+
+	}
 }

@@ -1,22 +1,26 @@
 package ohj.mcos.common.item;
 
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
  * @author OldHuaJi
  */
 
-
 public class ItemLoader {
-    public static Item smartPhone = new ItemSmartPhone();
+	public static Item smartPhone = new ItemSmartPhone();
+	public static Item cables =new ItemCables();
 
-    public ItemLoader(FMLPreInitializationEvent event) {
-        registerItem(smartPhone);
-    }
+	public ItemLoader(
+	FMLPreInitializationEvent event)
+	{
+		registerItem(smartPhone);
+		registerItem(cables);
+	}
 
-    private static void registerItem(Item item) {
-        GameRegistry.registerItem(item, item.getUnlocalizedName());
-    }
+	private static void registerItem(Item item) {
+		GameRegistry.register(item);
+
+	}
 }

@@ -9,11 +9,10 @@ import ohj.mcos.mcOSMain;
  */
 
 public class Cables extends Block {
-    public Cables() {
-        super(Material.rock);
-        this.setBlockName("cables")
-                .setBlockTextureName(mcOSMain.MODID + ":" + this.getUnlocalizedName())
-                .setCreativeTab(mcOSMain.tabmcOS);
+	public Cables() {
+		super(Material.ROCK);
+		this.setRegistryName(getClass().getName().toLowerCase()).setRegistryName(getUnlocalizedName())
+				.setCreativeTab(mcOSMain.tabmcOS);
 
-    }
+	}
 }

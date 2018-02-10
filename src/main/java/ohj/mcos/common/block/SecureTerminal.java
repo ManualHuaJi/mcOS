@@ -8,11 +8,10 @@ import ohj.mcos.mcOSMain;
  * @author OldHuaJi
  */
 
-
 public class SecureTerminal extends Block {
-    public SecureTerminal() {
-        super(Material.rock);
-        this.setBlockName("secureTerminal")
-                .setCreativeTab(mcOSMain.tabmcOS);
-    }
+	public SecureTerminal() {
+		super(Material.ROCK);
+		this.setRegistryName(this.getUnlocalizedName()).setCreativeTab(mcOSMain.tabmcOS)
+				.setUnlocalizedName(getClass().getName().toLowerCase());
+	}
 }
