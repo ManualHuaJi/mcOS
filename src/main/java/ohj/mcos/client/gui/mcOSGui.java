@@ -15,14 +15,14 @@ public class mcOSGui implements IGuiHandler {
     public static final int SMART_PHONE = 1;
 
     public mcOSGui() {
-        NetworkRegistry.INSTANCE.registerGuiHandler(mcOSMain.instance, this);
+
     }
 
     @Override
     public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
         switch (ID) {
             case SMART_PHONE:
-
+                return new GuiSmartPhone();
             default:
                 return null;
         }
