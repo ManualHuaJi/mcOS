@@ -12,7 +12,7 @@ public class InformationTerminal extends Block {
 
 	public InformationTerminal() {
 		super(Material.ROCK);
-		this.setCreativeTab(CreativeTabmcOS.tabmcOS).setUnlocalizedName(this.getClass().getSimpleName().toLowerCase())
+		this.setCreativeTab(CreativeTabmcOS.tabmcOS).setUnlocalizedName("block"+this.getClass().getSimpleName())
 				.setRegistryName(getUnlocalizedName());
 	}
 

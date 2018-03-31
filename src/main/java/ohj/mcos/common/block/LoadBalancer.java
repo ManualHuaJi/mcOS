@@ -12,7 +12,7 @@ public class LoadBalancer extends Block {
 
 	public LoadBalancer() {
 		super(Material.ROCK);
-		this.setUnlocalizedName(getClass().getSimpleName().toLowerCase()).setRegistryName(getUnlocalizedName())
+		this.setUnlocalizedName("block"+getClass().getSimpleName().toLowerCase()).setRegistryName(getUnlocalizedName())
 				.setCreativeTab(CreativeTabmcOS.tabmcOS);
 	}
 

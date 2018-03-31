@@ -11,7 +11,7 @@ import ohj.mcos.CreativeTabmcOS;
 public class ServerChassis extends Block {
 	public ServerChassis() {
 		super(Material.ROCK);
-		this.setCreativeTab(CreativeTabmcOS.tabmcOS).setUnlocalizedName(getClass().getSimpleName().toLowerCase())
+		this.setCreativeTab(CreativeTabmcOS.tabmcOS).setUnlocalizedName("block"+getClass().getSimpleName().toLowerCase())
 				.setRegistryName(getUnlocalizedName());
 
 	}

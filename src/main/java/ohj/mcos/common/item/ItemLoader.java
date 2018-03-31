@@ -3,15 +3,14 @@ package ohj.mcos.common.item;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.registries.IForgeRegistry;
-import ohj.mcos.mcOSMain;
+import ohj.mcos.MainmcOS;
 
 /**
  * @author OldHuaJi
  */
-@Mod.EventBusSubscriber(modid = mcOSMain.MODID)
+@Mod.EventBusSubscriber(modid = MainmcOS.MODID)
 public class ItemLoader {
     public static Item smartPhone = new ItemSmartPhone();
     public static Item cables = new ItemCables();
