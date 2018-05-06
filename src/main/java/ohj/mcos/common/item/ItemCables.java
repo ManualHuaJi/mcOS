@@ -5,7 +5,7 @@ import ohj.mcos.CreativeTabmcOS;
 
 public class ItemCables extends Item {
 	public ItemCables() {
-		this.setCreativeTab(CreativeTabmcOS.tabmcOS).setUnlocalizedName(this.getClass().getSimpleName().replaceFirst("Item", "item"))
+		this.setCreativeTab(CreativeTabmcOS.TABMCOS).setUnlocalizedName(this.getClass().getSimpleName().replaceFirst("Item", "item"))
 				.setRegistryName(getUnlocalizedName()).setHasSubtypes(true);
 	}
 }

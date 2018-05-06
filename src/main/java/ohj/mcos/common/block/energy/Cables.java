@@ -13,7 +13,7 @@ public class Cables extends Block implements IEnergyStorage {
     public Cables() {
         super(Material.ROCK);
         this.setRegistryName(getClass().getName().toLowerCase()).setRegistryName(getUnlocalizedName())
-                .setCreativeTab(CreativeTabmcOS.tabmcOS);
+                .setCreativeTab(CreativeTabmcOS.TABMCOS);
     }
 
     @Override

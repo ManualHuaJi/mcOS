@@ -1,6 +1,5 @@
 package ohj.mcos.client.gui;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
@@ -14,24 +13,22 @@ import ohj.mcos.MainmcOS;
 @SideOnly(Side.CLIENT)
 public class GuiSmartPhone extends GuiScreen {
     private ResourceLocation texture = new ResourceLocation(MainmcOS.MODID, "textures/gui/guismartphone.png");
-    private Minecraft mc = Minecraft.getMinecraft();
+    int xSize = 176;
+    int ySize = 256;
 
-    public GuiSmartPhone() {
-
+    public GuiSmartPhone(GuiScreen screen) {
     }
 
     @Override
     public void initGui() {
-
     }
 
     @Override
     public void drawScreen(int x, int y, float ticks) {
-        mc.getTextureManager().bindTexture(texture);
-        drawTexturedModalRect(0, 0, 0, 0, 256, 256);
+        this.mc.getTextureManager().bindTexture(texture);
+        int offsetX = (this.width - this.xSize) / 2, offsetY = (this.height - this.ySize) / 2;
+        this.drawTexturedModalRect(offsetX, offsetY, 0, 0, this.xSize, this.ySize);
         super.drawScreen(x, y, ticks);
-
-
     }
 
     @Override

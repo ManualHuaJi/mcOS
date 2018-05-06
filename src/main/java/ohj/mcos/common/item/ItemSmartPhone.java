@@ -20,16 +20,15 @@ import javax.annotation.Nonnull;
 
 public class ItemSmartPhone extends Item {
     public ItemSmartPhone() {
-        this.setUnlocalizedName(this.getClass().getSimpleName().replaceFirst("Item", "item")).setCreativeTab(CreativeTabmcOS.tabmcOS).setMaxStackSize(1)
+        this.setUnlocalizedName(this.getClass().getSimpleName().replaceFirst("Item", "item")).setCreativeTab(CreativeTabmcOS.TABMCOS).setMaxStackSize(1)
                 .setRegistryName(this.getUnlocalizedName());
     }
+
 
     @Override
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, @Nonnull EnumHand hand) {
         ItemStack stack = player.getHeldItem(hand);
-        Minecraft mc = Minecraft.getMinecraft();
-        mc.displayGuiScreen(new GuiSmartPhone());
-        mc.setIngameNotInFocus();
+        Minecraft.getMinecraft().displayGuiScreen(new GuiSmartPhone(Minecraft.getMinecraft().currentScreen));
         return ActionResult.newResult(EnumActionResult.PASS, stack);
 
     }

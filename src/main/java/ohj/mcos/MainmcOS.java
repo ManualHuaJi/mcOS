@@ -7,7 +7,6 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
-import ohj.mcos.client.gui.GuimcOS;
 import ohj.mcos.common.CommonProxy;
 
 import static ohj.mcos.MainmcOS.MODID;
@@ -31,7 +30,7 @@ public class MainmcOS {
     @EventHandler
     public void initEvent(FMLInitializationEvent event) {
         proxy.initEvent(event);
-        NetworkRegistry.INSTANCE.registerGuiHandler(MainmcOS.instance, new GuimcOS());
+
     }
 
     @EventHandler

@@ -10,10 +10,10 @@ import ohj.mcos.CreativeTabmcOS;
 
 public class LoadBalancer extends Block {
 
-	public LoadBalancer() {
-		super(Material.ROCK);
-		this.setUnlocalizedName("block"+getClass().getSimpleName().toLowerCase()).setRegistryName(getUnlocalizedName())
-				.setCreativeTab(CreativeTabmcOS.tabmcOS);
-	}
+    public LoadBalancer() {
+        super(Material.ROCK);
+        this.setUnlocalizedName("block" + getClass().getSimpleName()).setRegistryName(getUnlocalizedName())
+                .setCreativeTab(CreativeTabmcOS.TABMCOS);
+    }
 
 }

@@ -11,7 +11,7 @@ import ohj.mcos.CreativeTabmcOS;
 public class SecureTerminal extends Block {
 	public SecureTerminal() {
 		super(Material.ROCK);
-		this.setRegistryName("block"+this.getUnlocalizedName()).setCreativeTab(CreativeTabmcOS.tabmcOS)
+		this.setRegistryName("block"+this.getUnlocalizedName()).setCreativeTab(CreativeTabmcOS.TABMCOS)
 				.setUnlocalizedName(getClass().getSimpleName().toLowerCase());
 	}
 }

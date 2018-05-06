@@ -9,18 +9,20 @@ import javax.annotation.Nonnull;
 
 public final class CreativeTabmcOS
         extends CreativeTabs {
-    public static final CreativeTabmcOS tabmcOS = new CreativeTabmcOS();
+    public static final CreativeTabmcOS TABMCOS = new CreativeTabmcOS();
     NonNullList<ItemStack> list;
 
     public CreativeTabmcOS() {
-        super("tabmcOS");
+        super("TABMCOS");
     }
 
+    @Override
     @Nonnull
     public ItemStack getIconItemStack() {
         return new ItemStack(ItemLoader.smartPhone);
     }
 
+    @Override
     public ItemStack getTabIconItem() {
         return this.getIconItemStack();
     }
