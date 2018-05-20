@@ -1,8 +1,9 @@
-gui.smartphone.button.0=
-gui.smartphone.button.1=
-gui.smartphone.button.2=
-gui.smartphone.button.3=
-gui.smartphone.button.4=
-gui.smartphone.button.5=
-gui.smartphone.button.6=
-gui.smartphone.button.7=
+gui.smartphone.button.0=主页
+gui.smartphone.button.1=返回
+gui.smartphone.button.2=mcOS管理
+gui.smartphone.button.3=安全管理
+gui.smartphone.button.4=高危选项
+gui.smartphone.button.5=关于
+gui.smartphone.button.6=设备管理
+gui.smartphone.button.7=可视化管理
+gui.smartphone.button.8=附件
